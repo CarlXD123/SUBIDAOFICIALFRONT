@@ -108,7 +108,7 @@ export default function NuevoModelo() {
     }
     console.log(listmodel)
     console.log(nombre)
-    const [api, setApi] = React.useState<any>("http://localhost:5000/api/dymind/");
+    const [api, setApi] = React.useState<any>("https://repoficialbackend.onrender.com:10000/api/dymind/");
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
 
     const crearModel = () => {
