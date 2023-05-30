@@ -196,7 +196,9 @@ export default function TbModificarPersonal() {
         setFirmaFile(event.target.files[0]);
     };
     //#endregion
-
+    console.log(firma)
+    console.log(firmaFile)
+    console.log(validarFirma)
     //#region Cuarta Vista(Usuario)
     const handleChangeCorreo = (event: React.ChangeEvent<HTMLInputElement>) => {
         setCorreo(event.target.value);
@@ -652,7 +654,7 @@ export default function TbModificarPersonal() {
             typeDirection: direccion,
             iduser: userId,
             username: correo,
-            digitalSignatureUrl: firma.split("\\")[firma.split("\\").length - 1]
+            digitalSignatureUrl: validarFirma,
         }
 
         if (firma != "") {
@@ -673,6 +675,7 @@ export default function TbModificarPersonal() {
                     personalAgregadoError()
                 }
             });
+            
             return;
         }
 
