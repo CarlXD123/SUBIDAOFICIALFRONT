@@ -661,8 +661,7 @@ export default function TbCitas({ texto, opcion }: any) {
             sexo: d.client.genderStr,
             medico: d.Doctor.name,
             sede: d.headquarter.name,
-            apilis:ag.Exam.exam,
-
+         
           })
         });
 
